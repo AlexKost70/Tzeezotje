@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --white: #FFFFFF;
+}
+
+body {
+    background-image: url("./img/main.png");
+    background-size: 100% 901px;
+    background-repeat: no-repeat;
+}
+
+header, 
+.about,
+.schedule {
+    max-width: 1168px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    font-style: normal;
+}
+
+header a:hover {
+    color: #E5E4E2;
+}
+
+header .logo {
+    width: 269px;
+    height: 55px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+}
+
+header address a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+}
+
+main .about {
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 154px;
+    margin-bottom: 265px;
+}
+
+main .about .mode {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 1.44px;
+    margin-bottom: 24px;
+}
+
+main .about h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 88px;
+    margin-bottom: 40px;
+}
+
+main .about-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .about-footer .button {
+    width: 270px;
+    height: 100px;
+    background: #3A4574;
+    border: none;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+main .about-footer .button:hover {
+    color: #E5E4E2;
+    background: #47527e;
+}
+
+main .about-footer .social {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+main .about-footer .social a {
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+main .about-footer .social a:hover {
+    transition-duration: 0.5s;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+main .schedule {
+    padding-top: 60px;
+    padding-bottom: 178px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .schedule .day {
+    max-width: 469px;
+    border-bottom: 1px solid #E7E7E7;
+    padding: 20px 0;
+}
+
+main .schedule .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+main .schedule .dishes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+main .schedule .dishes .dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: #D3B47F;
+    border-radius: 50%;
+}
+
+main .schedule .images .decoration {
+    margin-top: 51px;
+    width: 471px;
+    height: 502px;
+    border: 2px solid #D3B47F;
+    margin-right: 99px;
+}
+
+main .schedule .images .images-wrapper {
+    position: relative;
+    top: -502px;
+}
+
+main .schedule .images img {
+    width: 323px;
+    height: 486px;
+    position: absolute;
+    display: flex;
+}
+
+
+main .schedule .images img:first-child {
+    top: -51px;
+    left: 243px;
+}
+
+main .schedule .images img:last-child {
+    left: -97px;
+    top: 101px;
+}
+
+main .slider {
+    height: 782px;
+    background: #3A4574;
+    padding: 220px 0;
+}
+
+main .slider .swiper {
+    max-width: 1168px;
+    height: 353px;
+    margin: 0 auto;
+}
+
+main .swiper-button-next::after, 
+main .swiper-button-prev::after {
+    color: var(--white);
+}
+
+main .slider .slide-wrapper {
+    max-width: 785px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main .slider .title,
+main .slider .author {
+    color: #D3B47F;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+main .slider .title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: 34px;
+    margin-bottom: 20px;
+}
+
+main .slider blockquote {
+    color: var(--white);
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+main .slider .author {
+    font-size: 24px;
+    letter-spacing: 5.88px;
+}
