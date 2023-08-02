@@ -11,7 +11,7 @@
 
 body {
     background-image: url("./img/main.png");
-    background-size: 100% 901px;
+    background-size: auto 901px;
     background-repeat: no-repeat;
 }
 
@@ -484,11 +484,14 @@ main .slider .author {
 }
 
 @media (max-width: 576px) {
-    main .about {
-        margin-bottom: 106px;
-    }
     main .schedule {
         padding-top: 20px;
+    }
+}
+
+@media (max-width: 548px) {
+    main .about {
+        margin-bottom: 107px;
     }
 }
 
