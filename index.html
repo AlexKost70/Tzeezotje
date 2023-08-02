@@ -9,12 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-/>
 </head>
 <body>
     <header>
         <img src="./img/logo.png" alt="Logo" class="logo">
-        <nav>
+        <nav class="menu">
             <ul>
                 <li>
                     <a href="#">À la carte</a>
@@ -30,6 +29,38 @@
                 </li>
             </ul>
         </nav>
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox">
+        <label for="menu-checkbox">
+            <div class="menu-button">
+                <span></span>
+            </div>
+        </label>
+        <div class="mobile-menu">
+            <label for="menu-checkbox">
+                <div class="menu-button">
+                    <span></span>
+                </div>
+            </label>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">À la carte</a>
+                    </li>
+                    <li>
+                        <a href="#">Wijnkaart</a>
+                    </li>
+                    <li>
+                        <a href="#">Lunchmenu</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <address>
+                <a href="tel:+3292825725"><img src="./img/phone.svg" alt="Phone Icon">+32 9 282 57 25</a>
+            </address>
+        </div>
         <address>
             <a href="tel:+3292825725"><img src="./img/phone.svg" alt="Phone Icon">+32 9 282 57 25</a>
         </address>

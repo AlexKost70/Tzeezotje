@@ -17,7 +17,8 @@ body {
 
 header, 
 .about,
-.schedule {
+.schedule,
+.swiper {
     max-width: 1168px;
     margin: 0 auto;
 }
@@ -45,10 +46,109 @@ header .logo {
     height: 55px;
 }
 
-header nav ul {
+header .menu ul {
     display: flex;
     gap: 45px;
     list-style: none;
+}
+
+header .mobile-menu {
+    display: none;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+#menu-checkbox:checked ~ .mobile-menu {
+    display: flex;
+}
+
+header .menu-button {
+    width: 45px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+header .menu-button span,
+header .menu-button::before,
+header .menu-button::after {
+    display: inline-block;
+    height: 5px;
+    background-color: var(--white);
+    content: "";
+}
+
+header .menu-button:hover span,
+header .menu-button:hover::before,
+header .menu-button:hover::after {
+    background-color: #E5E4E2;
+}
+
+header .mobile-menu {
+    padding: 40px 10px;
+    padding-bottom: 0;
+    position: fixed;
+    background-color: var(--white);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .mobile-menu a {
+    color: #000000;
+    font-size: 20px;
+}
+
+header .mobile-menu label {
+    align-self: flex-end;
+}
+
+header .mobile-menu .menu-button span {
+    display: none;
+}
+
+header .mobile-menu .menu-button::before {
+    transform: rotate(-45deg);
+}
+
+header .mobile-menu .menu-button::after {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+header .mobile-menu .menu-button::before, 
+header .mobile-menu .menu-button::after {
+    background-color: #000000;
+}
+
+header .mobile-menu nav {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .mobile-menu nav ul {
+    list-style: none;
+    width: 100%;
+    max-width: 80%;
+}
+
+header .mobile-menu nav li {
+    border-bottom: 2px solid #000000;
+    margin-top: 70px;
+}
+
+header .mobile-menu address {
+    margin-top: 70px;
+    display: flex;
 }
 
 header address a {
@@ -206,9 +306,7 @@ main .slider {
 }
 
 main .slider .swiper {
-    max-width: 1168px;
-    height: 353px;
-    margin: 0 auto;
+    min-height: 353px;
 }
 
 main .swiper-button-next::after, 
@@ -245,4 +343,186 @@ main .slider blockquote {
 main .slider .author {
     font-size: 24px;
     letter-spacing: 5.88px;
+}
+
+@media (max-width: 1178px) {
+    header, 
+    .about,
+    .schedule,
+    .swiper {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1160px) {
+    main .schedule .dishes {
+        font-size: 14px;
+    }
+
+    main .schedule .images .decoration {
+        margin-right: 19px;
+    }
+
+    main .schedule .images img {
+        width: 250px;
+        height: auto;
+    }
+
+    main .schedule .images img:last-child {
+        top: 152px;
+    }
+}
+
+@media (max-width: 995px) {
+    header address {
+        display: none;
+    }
+
+    main .about {
+        margin-bottom: 177px;
+    }
+
+    main .schedule {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .schedule .images img {
+        width: 323px;
+        height: 486px;
+    }
+
+    main .schedule .images .decoration {
+        margin-top: 111px;
+        margin-right: 0;
+    }
+
+    main .slider .slide-wrapper {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 770px) {
+    header,
+    header .menu ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    header .menu {
+        display: none;
+    }
+
+    header .menu-button {
+        display: flex;
+    }
+
+    main .about {
+        margin-top: 66px;
+    }
+
+    main .slider {
+        padding-top: 150px;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 675px) {
+    body {
+        background-size: 100% 800px;
+    }
+
+    main .about {
+        margin-top: 120px;
+    }
+
+    main .about .mode {
+        font-size: 20px;
+    }
+
+    main .about h1 {
+        font-size: 35px;
+        line-height: 60px;
+    }
+
+    main .about-footer {
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    main .schedule {
+        padding: 20px;
+    }
+
+    main .schedule .images .decoration {
+        position: static;
+        display: none;
+    }
+
+    main .schedule .images .images-wrapper {
+        position: static;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main .schedule .images img {
+        position: static;
+    }
+
+    main .slider {
+        height: 1000px;
+    }
+
+    main .slider .slide-wrapper {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    main .about {
+        margin-bottom: 106px;
+    }
+    main .schedule {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 445px) {
+    main .schedule .title {
+        text-align: center;
+    }
+
+    main .schedule .dishes {
+        flex-direction: column;
+    }
+
+    main .schedule .dishes .dot:first-of-type,
+    main .schedule .dishes .dot:last-of-type {
+        display: none;
+    }
+}
+
+@media (max-width: 395px) {
+    header {
+        margin-top: 15px;
+    }
+
+    header .logo {
+        width: 180px;
+        height: auto;
+    }
+
+    main .about {
+        text-align: center;
+    }
+
+    main .schedule .images img {
+        width: 100%;
+        height: auto;
+    }
 }
