@@ -70,7 +70,7 @@
             <p class="mode">OPEN EVERYDAY 6AM - 9PM</p>
             <h1>A bad day with lunch is better than a good day without it.</h1>
             <div class="about-footer">
-                <button type="button" class="button">Reserve a table</button>
+                <button type="button" class="button" id="button">Reserve a table</button>
                     <ul class="social">
                         <li><a href="">Fb</a></li>
                         <li><a href="">Ig</a></li>
@@ -78,6 +78,33 @@
                         <li><a href="">Yt</a></li>
                     </ul>
                 </div>
+            </div>
+            <div class="modal" id="modal">
+                <button id="close-button" id="close-button">X</button>
+                <form action="#" method="POST" id="form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="John Smith">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="johnsmith@mail.com">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="+7123123123">
+                    <label for="phone">Date</label>
+                    <input type="date" id="date" placeholder="dd.mm.yy">
+                    <label for="people">People</label>
+                    <select id="people">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
             </div>
         </section>
         <section class="schedule">
